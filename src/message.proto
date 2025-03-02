@@ -2,11 +2,16 @@ syntax = "proto3";
 
 package eye_msgs;
 
+message ServoRequest {
+    uint32 angle = 1;
+    uint32 servo_number = 2;
+}
+
 message EyeRequest {
     int32 vert_angle = 1;
     int32 left_horiz_angle = 2;
-    int32 right_horiz_angle = 3;
+    optional int32 right_horiz_angle = 3;
     uint32 left_eyelid_gap = 4;
     uint32 right_eyelid_gap = 5;
-    bool blink = 6;  
+    optional bool blink = 6;  
 }
