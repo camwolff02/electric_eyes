@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package eye_msgs;
+
+message EyeRequest {
+    int32 vert_angle = 1;
+    int32 left_horiz_angle = 2;
+    int32 right_horiz_angle = 3;
+    uint32 left_eyelid_gap = 4;
+    uint32 right_eyelid_gap = 5;
+    bool blink = 6;  
+}
